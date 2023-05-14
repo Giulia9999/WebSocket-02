@@ -24,8 +24,7 @@ public class Notification {
     @SendTo("/broadcast/broadcast-message")
     public MessageDTO handleMessageWebSocket(@RequestBody ClientMessageDTO clientMessage){
         System.out.println("Arrived something on /app/client-message" + clientMessage.toString());
-        return new MessageDTO("Message from: " + clientMessage.getClientName() +
-                " - message: " + clientMessage.getClientMsg() + " alert: " + clientMessage.getClientAlert());
+        return new MessageDTO(clientMessage.getClientName(), clientMessage.getClientAlert(), clientMessage.getClientMsg());
     }
 
 }

@@ -53,13 +53,16 @@ function sendName() {
 function sendMessage() {
   var fromInput = document.querySelector('#clientName');
   var textInput = document.querySelector('#clientMsg');
+  var alertInput = document.querySelector('#clientAlert');
   var from = fromInput.value.trim(); // Remove any leading or trailing white space
   var text = textInput.value.trim(); // Remove any leading or trailing white space
-  if (from && text && stompClient) {
-    var message = {'clientName': from, 'clientMsg': text}; // Create the ClientMessageDTO object using 'from' and 'text'
+  var alert = alertInput.value.trim(); // Remove any leading or trailing white space
+  if (from && text && alert && stompClient) {
+    var message = {'clientName': from, 'clientMsg': text, 'alert': alert}; // Create the ClientMessageDTO object using 'from' and 'text'
     stompClient.send('/app/client-message', {}, JSON.stringify(message)); // Send the message to the server
     fromInput.value = ''; // Clear the input field
     textInput.value = ''; // Clear the input field
+    alertInput.value = ''; // Clear the input field
   }
 }
 
