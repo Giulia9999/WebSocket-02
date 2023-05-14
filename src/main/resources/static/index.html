@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<div>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <button onclick="connect()">Connect</button>
+    <button onclick="disconnect()">Disconnect</button>
+</div>
+<div>
+    <textarea id="greetings" cols="40" rows="10"></textarea>
+    <br>
+    <input type="text" id="clientName">
+    <input type="text" id="clientMsg">
+    <button onclick="sendMessage()">Send</button>
+</div>
+</body>
+</html>

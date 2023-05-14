@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "2cb97cb5-b06b-4a72-ad67-2a79b2e33056",
+		"name": "Web_Socket_02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26043911",
+		"_collection_link": "https://java-team-222.postman.co/workspace/PrimaProva~3b9dee89-b772-45b1-a248-a599dc586a41/collection/26043911-2cb97cb5-b06b-4a72-ad67-2a79b2e33056?action=share&creator=26043911&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "send_message_brocker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"This is the message\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{myHost}}/notification",
+					"host": [
+						"{{myHost}}"
+					],
+					"path": [
+						"notification"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "send_message_brocker",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sender\": \"Giulis\",\r\n    \"type\": \"message\",\r\n    \"message\": \"This is the message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{myHost}}/notification",
+							"host": [
+								"{{myHost}}"
+							],
+							"path": [
+								"notification"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 01:46:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "send_message_client",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

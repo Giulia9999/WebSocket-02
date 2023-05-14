@@ -4,14 +4,15 @@ public class MessageDTO {
     private String sender;
     private String type;
     private String message;
-
-    public MessageDTO() {
-    }
+    
 
     public MessageDTO(String sender, String type, String message) {
         this.sender = sender;
         this.type = type;
         this.message = message;
+    }
+
+    public MessageDTO(String message) {
     }
 
     public String getSender() {
@@ -36,5 +37,14 @@ public class MessageDTO {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        return "MessageDTO{" +
+                "sender='" + sender + '\'' +
+                ", type='" + type + '\'' +
+                ", message='" + message + '\'' +
+                '}';
     }
 }
